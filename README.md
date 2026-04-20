@@ -3,20 +3,18 @@
 
 # 🚀 TestAutomation_TestCafe
 
-A comprehensive **end-to-end test automation project** developed using **TestCafe** as part of Software QA coursework. This project focuses on building reliable, maintainable, and scalable web test automation solutions with modern testing practices.
+A structured **end-to-end test automation project** built using **TestCafe**, developed as part of Software QA coursework. This project demonstrates practical testing approaches including automation design patterns, data-driven testing, and CI/CD integration.
 
 ---
 
 ## 🧩 Overview
 
-This repository demonstrates practical implementation of:
+This project focuses on:
 
-* Cross-browser web automation
-* Maintainable test architecture
-* Data-driven testing strategies
-* Automated reporting and debugging support
-
-The project mainly targets **HRM systems** and common web application workflows.
+* Reliable web test automation
+* Maintainable architecture using industry practices
+* Continuous Integration and automated execution
+* Testing real-world workflows (HRM systems and web apps)
 
 ---
 
@@ -24,42 +22,61 @@ The project mainly targets **HRM systems** and common web application workflows.
 
 ### 🔹 Cross-Browser Testing
 
-* Optimized for **Firefox** to handle browser permission limitations effectively
-* Supports execution across multiple browsers if needed
+* Configured primarily for **Firefox**
+* Can be extended to other browsers
 
 ### 🔹 Page Object Model (POM)
 
-* Clean separation of UI elements and test logic
-* Improves readability and maintainability
+* Separates UI logic from test logic
+* Improves scalability and maintainability
 
 ### 🔹 Data-Driven Testing
 
-* Uses **JSON datasets**
-* Enables running the same test scenarios with multiple inputs (e.g., login credentials)
+* Uses JSON datasets (`data/data.json`)
+* Executes test scenarios with multiple inputs
 
 ### 🔹 Automated Reporting
 
-* Screenshot capture on test failures
+* Screenshot capture on failures
+* Organized result storage
 * Headless execution support
-* Configurable reporting options
 
-### 🔹 Targeted Test Coverage
+### 🔹 CI/CD Integration
 
-* HRM system workflows
-* Common web application functionalities
+* Integrated with **Azure Pipelines**
+* Automated test execution on code changes
+* Supports continuous testing workflows
 
 ---
 
 ## 📁 Project Structure
 
-```
+```bash
 TestAutomation_TestCafe/
 │
-├── tests/              # Test scripts and fixtures
-├── page-models/        # Page Object Model implementations
-├── data/               # JSON datasets for testing
-├── .testcaferc.js      # Global TestCafe configuration
-└── package.json        # Project dependencies and scripts
+├── data/
+│   └── data.json                # Test data (data-driven testing)
+│
+├── tests/
+│   ├── exampleDOT.js
+│   ├── exampleXpath.js
+│   ├── helloTestcafe.js
+│   ├── loginTest.js
+│   ├── test.js
+│   └── xpath-selector.js       # Test scripts
+│
+├── screenshots/                # Captured screenshots on failures
+├── results/                    # Test execution results
+│   └── screenshots/            # Organized failure screenshots
+│
+├── thumbnails/                 # Screenshot previews
+│
+├── .testcaferc.js              # TestCafe configuration
+├── azure-pipelines.yml         # CI/CD pipeline configuration
+├── package.json                # Dependencies and scripts
+├── package-lock.json
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -68,27 +85,15 @@ TestAutomation_TestCafe/
 
 ### 📌 Prerequisites
 
-* Install **Node.js** (LTS version recommended)
+* Node.js (LTS version recommended)
 
 ---
 
 ### 📥 Installation
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/WijAnushka02/TestAutomation_TestCafe.git
-```
-
-Navigate to the project directory:
-
-```bash
 cd TestAutomation_TestCafe
-```
-
-Install dependencies:
-
-```bash
 npm install
 ```
 
@@ -96,13 +101,13 @@ npm install
 
 ## ▶️ Running Tests
 
-### Run all tests (Firefox)
+### Run all tests
 
 ```bash
 npx testcafe firefox tests/
 ```
 
-### Run tests in headless mode
+### Run in headless mode
 
 ```bash
 npx testcafe firefox tests/ --headless
@@ -112,33 +117,39 @@ npx testcafe firefox tests/ --headless
 
 ## 🔧 Configuration
 
-The project uses `.testcaferc.js` for centralized configuration:
+The `.testcaferc.js` file manages:
 
-* Default browser setup (Firefox)
-* Screenshot storage paths
+* Default browser (Firefox)
+* Screenshot handling
 * Concurrency settings
-* Headless execution
-* Optional video and report generation
+* Headless mode
+* Reporting options
+
+---
+
+## 🔄 CI/CD Pipeline
+
+The project includes **Azure DevOps Pipeline configuration**:
+
+* Defined in `azure-pipelines.yml`
+* Automatically installs dependencies
+* Runs test cases on pipeline triggers
+* Helps ensure code quality through continuous testing
 
 ---
 
 ## 📌 Highlights
 
-* Structured using **industry-standard design patterns**
-* Easy to extend for new test scenarios
-* Suitable for learning **real-world QA automation practices**
-
----
-
-## 🤝 Contribution
-
-This project is primarily for academic and learning purposes.
-However, improvements and suggestions are welcome.
+* Uses **industry-standard QA practices**
+* Clean and modular structure
+* Supports scalable automation
+* Integrated with CI/CD for real-world workflows
 
 ---
 
 ## 📄 License
 
-This project is open-source and available for educational use.
+This project is intended for educational and learning purposes.
 
 ---
+
