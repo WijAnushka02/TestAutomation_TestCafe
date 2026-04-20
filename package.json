@@ -1,5 +1,10 @@
 {
   "devDependencies": {
-    "testcafe": "^3.7.4"
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "testcafe": "^3.3.0",
+    "testcafe-reporter-nunit3": "^3.1.0"
+  },
+  "scripts": {
+    "test": "testcafe firefox tests/test.js -s path=results/screenshots,takeOnFails=true -S --video results/videos --reporter nunit3"
   }
 }

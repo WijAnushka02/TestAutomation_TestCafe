@@ -1,0 +1,26 @@
+jobs:
+- job: e2e_tests
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '14.x'
+    displayName: 'Install Node.js'
+
+  - script: npm install
+    displayName: 'Install TestCafe'
+
+  - script: npm test
+    displayName: 'Run TestCafe Tests'
+    continueOnError: true
+
+  - task: PublishTestResults@2
+    displayName: 'Publish test results'
+    inputs:
+      testResultsFiles: '**/report.xml'
+      searchFolder: $(System.DefaultWorkingDirectory)
+      testResultsFormat: 'NUnit'
+      publishRunAttachments: true
+      testRunTitle: 'Task Results'
+      failTaskOnFailedTests: false
