@@ -1,55 +1,144 @@
-TestAutomation_TestCafe 🚀
-This repository contains a comprehensive suite of automated end-to-end tests developed as part of my Software QA coursework. It leverages TestCafe to perform robust web automation, focusing on cross-browser compatibility and advanced testing patterns.
 
-🛠 Features
-Cross-Browser Testing: Configured specifically to utilize Firefox to bypass common browser permission issues.
+---
 
-Design Patterns: Implements the Page Object Model (POM) for better maintainability and cleaner test scripts.
+# 🚀 TestAutomation_TestCafe
 
-Data-Driven Testing: Utilizes JSON datasets to run the same test scenarios with multiple inputs (e.g., login credentials).
+A comprehensive **end-to-end test automation project** developed using **TestCafe** as part of Software QA coursework. This project focuses on building reliable, maintainable, and scalable web test automation solutions with modern testing practices.
 
-Automated Reporting: Integrated screenshot capture on failure and headless execution support.
+---
 
-Targeted Testing: Includes test suites for HRM (Human Resource Management) systems and various web application workflows.
+## 🧩 Overview
 
-📂 Project Structure
-tests/: Contains the actual test scripts and fixtures.
+This repository demonstrates practical implementation of:
 
-page-models/: Encapsulates page elements and actions (POM).
+* Cross-browser web automation
+* Maintainable test architecture
+* Data-driven testing strategies
+* Automated reporting and debugging support
 
-data/: JSON files used for data-driven testing.
+The project mainly targets **HRM systems** and common web application workflows.
 
-.testcaferc.js: Global configuration for the TestCafe runner.
+---
 
-🚀 Getting Started
-Prerequisites
-Ensure you have Node.js installed on your machine.
+## ✨ Key Features
 
-Installation
+### 🔹 Cross-Browser Testing
+
+* Optimized for **Firefox** to handle browser permission limitations effectively
+* Supports execution across multiple browsers if needed
+
+### 🔹 Page Object Model (POM)
+
+* Clean separation of UI elements and test logic
+* Improves readability and maintainability
+
+### 🔹 Data-Driven Testing
+
+* Uses **JSON datasets**
+* Enables running the same test scenarios with multiple inputs (e.g., login credentials)
+
+### 🔹 Automated Reporting
+
+* Screenshot capture on test failures
+* Headless execution support
+* Configurable reporting options
+
+### 🔹 Targeted Test Coverage
+
+* HRM system workflows
+* Common web application functionalities
+
+---
+
+## 📁 Project Structure
+
+```
+TestAutomation_TestCafe/
+│
+├── tests/              # Test scripts and fixtures
+├── page-models/        # Page Object Model implementations
+├── data/               # JSON datasets for testing
+├── .testcaferc.js      # Global TestCafe configuration
+└── package.json        # Project dependencies and scripts
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 📌 Prerequisites
+
+* Install **Node.js** (LTS version recommended)
+
+---
+
+### 📥 Installation
+
 Clone the repository:
 
-Bash
+```bash
 git clone https://github.com/WijAnushka02/TestAutomation_TestCafe.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd TestAutomation_TestCafe
+```
+
 Install dependencies:
 
-Bash
+```bash
 npm install
-Running Tests
-To run the tests using the Firefox configuration:
+```
 
-Bash
-# Run all tests
+---
+
+## ▶️ Running Tests
+
+### Run all tests (Firefox)
+
+```bash
 npx testcafe firefox tests/
+```
 
-# Run in headless mode (defined in .testcaferc.js)
+### Run tests in headless mode
+
+```bash
 npx testcafe firefox tests/ --headless
-⚙️ Configuration details
-The project uses a .testcaferc.js file to manage:
+```
 
-Browser choice (Defaulting to Firefox)
+---
 
-Screenshot paths
+## 🔧 Configuration
 
-Concurrency levels
+The project uses `.testcaferc.js` for centralized configuration:
 
-Video/Report generation
+* Default browser setup (Firefox)
+* Screenshot storage paths
+* Concurrency settings
+* Headless execution
+* Optional video and report generation
+
+---
+
+## 📌 Highlights
+
+* Structured using **industry-standard design patterns**
+* Easy to extend for new test scenarios
+* Suitable for learning **real-world QA automation practices**
+
+---
+
+## 🤝 Contribution
+
+This project is primarily for academic and learning purposes.
+However, improvements and suggestions are welcome.
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational use.
+
+---
